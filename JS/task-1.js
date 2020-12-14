@@ -5,10 +5,21 @@
 // заменяет значение premium на false
 // выводит содержимое объекта user в формате ключ:значение используя Object.keys() и for...of
 
-
 const user = {
   name: 'Mango',
   age: 20,
   hobby: 'html',
   premium: true,
 };
+console.log(user);
+
+user.mood = 'Happy';
+user.jobby = 'Skydiving';
+user.premium = 'false';
+
+console.log(user);
+
+const keys = Object.keys(user);
+for (const key of keys) {
+  console.log(`${key}: ${user[key]}`);
+}

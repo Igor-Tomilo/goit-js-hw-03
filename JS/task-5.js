@@ -7,8 +7,15 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-const getAllPropValues = function(arr, prop) {
+const getAllPropValues = function (arr, prop) {
   // твой код
+  let arrayValues = [];
+  for (const product of arr) {
+    if (product[prop] !== undefined) {
+      arrayValues.push(product[prop]);
+    }
+  }
+  return arrayValues;
 };
 
 /*
